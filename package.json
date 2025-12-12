@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.12.8"
+    "@astrojs/vercel": "^9.0.2",
+    "@react-icons/all-files": "^4.1.0",
+    "astro": "^5.12.8",
+    "react-icons": "^5.5.0"
   }
 }

@@ -10,6 +10,8 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Skills from '../components/Skills.astro';
+
+
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -78,19 +80,27 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h3>Skills</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						Here are some of my core technical skills:
 					</p>
 				</header>
+				
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							[
+								{ name: 'Astro', icon: 'code'},
+								{ name: 'React', icon: 'atom' },
+								{ name: 'AWS', icon: 'cloud' },
+								{ name: 'MySQL', icon: 'database' },
+								{ name: 'NodeJS', icon: 'node' },
+								{ name: 'Azure', icon: 'filecloud' }
+							].map((skill) => (
 								<li class="mention-card">
-									<p>{brand}</p>
+									<Icon icon={skill.icon} size="2em" class="skill-icon"/>
+									<p>{skill.name}</p>
 								</li>
 							))
 						}
@@ -236,7 +246,7 @@ const projects = (await getCollection('work'))
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
 		color: var(--gray-300);
-		background: var(--gradient-subtle);
+		background: linear-gradient(135deg, #944092, #f06292, #f48fb1); color: white;
 		box-shadow: var(--shadow-sm);
 	}
 
@@ -245,5 +255,9 @@ const projects = (await getCollection('work'))
 			border-radius: 1.5rem;
 			height: 9.5rem;
 		}
+	}
+
+	.skill-icon {
+		margin-left: 1.5em;
 	}
 </style>

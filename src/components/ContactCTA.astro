@@ -5,13 +5,24 @@ import Icon from './Icon.astro';
 
 <aside>
 	<h2>Interested in working together?</h2>
-	<CallToAction href="mailto:rcbaruelo1029@gmail.com">
-		Send Me a Message
-		<Icon icon="paper-plane-tilt" size="1.2em" />
-	</CallToAction>
+	<div class="buttons">
+		<CallToAction href="mailto:rcbaruelo1029@gmail.com">
+			Send Me a Message
+			<Icon icon="paper-plane-tilt" size="1.2em" />
+		</CallToAction>
+		<CallToAction href="/resume.pdf" download>
+			Download Resume
+			<Icon icon="filecloud" size="1.2em" />
+		</CallToAction>
+	</div>
 </aside>
 
+
 <style>
+	.buttons {
+		display: flex;
+		gap: 1rem;
+	}
 	aside {
 		display: flex;
 		flex-direction: column;
@@ -31,6 +42,10 @@ import Icon from './Icon.astro';
 	}
 
 	@media (min-width: 50em) {
+		.buttons {
+			flex-direction: row;
+		}
+
 		aside {
 			padding: 7.5rem;
 			flex-direction: row;
