@@ -33,6 +33,18 @@ const { align = 'center', tagline, title } = Astro.props;
 		color: var(--gray-0);
 	}
 
+	/* Tablet breakpoint */
+	@media (min-width: 48em) {
+		.hero {
+			font-size: var(--text-lg);
+		}
+
+		.title {
+			font-size: var(--text-4xl);
+		}
+	}
+
+	/* Desktop breakpoint */
 	@media (min-width: 50em) {
 		.hero {
 			font-size: var(--text-xl);

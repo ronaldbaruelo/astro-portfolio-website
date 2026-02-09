@@ -264,6 +264,22 @@ const isCurrentPage = (href: string) => {
 		height: calc(var(--icon-size) + 2 * var(--icon-padding));
 	}
 
+	/* Tablet breakpoint */
+	@media (min-width: 48em) {
+		nav {
+			margin-bottom: 4rem;
+		}
+
+		.menu-header {
+			padding: 1.5rem 2rem;
+		}
+
+		.site-title {
+			font-size: var(--text-md);
+		}
+	}
+
+	/* Desktop breakpoint */
 	@media (min-width: 50em) {
 		nav {
 			display: grid;

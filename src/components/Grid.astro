@@ -29,6 +29,19 @@ const { variant } = Astro.props;
 		grid-column: 1 / 3;
 	}
 
+	/* Tablet breakpoint */
+	@media (min-width: 48em) {
+		.grid {
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+
+		.grid.small {
+			gap: 2rem;
+		}
+	}
+
+	/* Desktop breakpoint */
 	@media (min-width: 50em) {
 		.grid {
 			grid-template-columns: 1fr 1fr;

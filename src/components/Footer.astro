@@ -55,6 +55,26 @@ const currentYear = new Date().getFullYear();
 		flex-wrap: wrap;
 	}
 
+	/* Tablet breakpoint */
+	@media (min-width: 48em) {
+		footer {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 2.5rem 3rem;
+		}
+
+		.group {
+			flex-direction: row;
+			gap: 1rem;
+			flex-wrap: wrap;
+		}
+
+		.socials {
+			justify-content: flex-end;
+		}
+	}
+
+	/* Desktop breakpoint */
 	@media (min-width: 50em) {
 		footer {
 			flex-direction: row;

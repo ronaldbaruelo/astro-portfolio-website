@@ -234,6 +234,41 @@ h5 {
 	gap: 12rem;
 }
 
+/* Tablet breakpoint (768px) */
+@media (min-width: 48em) {
+	h1 {
+		font-size: var(--text-4xl);
+	}
+
+	h2 {
+		font-size: var(--text-3xl);
+	}
+
+	h3 {
+		font-size: var(--text-2xl);
+	}
+
+	.md\:gap-2 {
+		gap: 0.5rem;
+	}
+	.md\:gap-4 {
+		gap: 1rem;
+	}
+	.md\:gap-8 {
+		gap: 2rem;
+	}
+	.md\:gap-10 {
+		gap: 2.5rem;
+	}
+	.md\:gap-15 {
+		gap: 3.75rem;
+	}
+	.md\:gap-20 {
+		gap: 5rem;
+	}
+}
+
+/* Desktop breakpoint (800px) */
 @media (min-width: 50em) {
 	.lg\:gap-2 {
 		gap: 0.5rem;
