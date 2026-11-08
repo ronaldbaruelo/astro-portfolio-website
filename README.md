@@ -1,6 +1,6 @@
 # Dark Cybersecurity Portfolio — React + Vite
 
-A personal cybersecurity and IT portfolio for Ronald Baruelo, built with React, Vite and plain CSS. Pearl uses a Node.js backend to generate portfolio answers with Google Gemini.
+A personal cybersecurity and IT portfolio for Ronald Baruelo, built with React, Vite and plain CSS. Rose uses a Node.js backend to generate portfolio answers with Google Gemini.
 
 ## Requirements
 
@@ -49,7 +49,7 @@ Optional resume:
 npm run build
 ```
 
-Vite generates `dist`. For live Pearl replies, deploy this project to a host that runs Node.js, use build command `npm run build` and start command `npm start`. Set `GEMINI_API_KEY`, `GEMINI_MODEL` and `HOST=0.0.0.0` as server environment variables. The server serves both the built website and `/api/chat`. Publishing only `dist` provides the portfolio without its AI backend.
+Vite generates `dist`. For live Rose replies, deploy this project to a host that runs Node.js, use build command `npm run build` and start command `npm start`. Set `GEMINI_API_KEY`, `GEMINI_MODEL` and `HOST=0.0.0.0` as server environment variables. The server serves both the built website and `/api/chat`. Publishing only `dist` provides the portfolio without its AI backend.
 
 ## File structure
 
@@ -75,7 +75,7 @@ ronald-cybersecurity-portfolio/
 - If you see `Unsupported engine`, upgrade Node to a version supported by Vite.
 - If port `5173` is already in use, Vite may use the next available port. Open the URL shown in the terminal.
 - You **do not** need the VS Code Live Server extension for this React project. Use `npm run dev`.
-# Pearl portfolio chat
+# Rose portfolio chat
 
 ## Update an existing Vercel project
 
@@ -83,18 +83,18 @@ This project includes Vercel functions at `api/chat.js` and `api/health.js`, plu
 
 Link this folder to your existing Vercel project to preserve its domain. If deploying through Git, update the repository already connected to that project. Set the Vercel root directory to the folder containing this `package.json`, build command to `npm run build`, and output directory to `dist`.
 
-In the existing Vercel project's environment settings, add `GEMINI_API_KEY` and `GEMINI_MODEL` using your private local values. Set `NODE_ENV=production`. Never commit `.env`. Deploy a preview first, check `/api/health` and a Pearl reply, then promote the tested deployment to production. In-memory rate limits are per function instance; use Vercel-level rate limits for public traffic.
+In the existing Vercel project's environment settings, add `GEMINI_API_KEY` and `GEMINI_MODEL` using your private local values. Set `NODE_ENV=production`. Never commit `.env`. Deploy a preview first, check `/api/health` and a Rose reply, then promote the tested deployment to production. In-memory rate limits are per function instance; use Vercel-level rate limits for public traffic.
 
-The floating “Ask Pearl” button opens a portfolio guide inspired by the desktop IT Gadgets assistant. It includes quick prompts, recent conversations and a new-chat action. Conversations are saved only in this browser and can be removed with “Clear all conversations” in chat history.
+The floating “Ask Rose” button opens a portfolio guide inspired by the desktop IT Gadgets assistant. It includes quick prompts, recent conversations and a new-chat action. Conversations are saved only in this browser and can be removed with “Clear all conversations” in chat history.
 
-Pearl sends conversation context to `/api/chat`. The server calls Gemini with portfolio facts from `src/data.js` and education instructions in `server/index.js`. No database is required. The original caravan assistant remains separate.
+Rose sends conversation context to `/api/chat`. The server calls Gemini with portfolio facts from `src/data.js` and education instructions in `server/index.js`. No database is required. The original caravan assistant remains separate.
 
 ## Enable live AI locally
 
 1. Copy `.env.example` to `.env` and set `GEMINI_API_KEY` to your Gemini key. An existing key may already have been copied from your desktop assistant. Never put keys in `src/` or in a `VITE_` variable.
 2. In one terminal run `npm run server` (port 5002).
 3. In another terminal run `npm run dev`, then open Vite's printed URL. Vite proxies `/api` to port 5002. If you change the backend port, update `vite.config.js` too.
-4. Ask Pearl a question. Errors retain your question so you can send it again. `http://127.0.0.1:5002/api/health` reports whether a key is configured, without returning the key.
+4. Ask Rose a question. Errors retain your question so you can send it again. `http://127.0.0.1:5002/api/health` reports whether a key is configured, without returning the key.
 
 For a production-style local run, use `npm run build` followed by `npm start` and visit `http://127.0.0.1:5002`.
 

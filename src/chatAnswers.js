@@ -4,7 +4,7 @@ export function answerQuestion(question) {
   const text = question.toLowerCase()
   if (/contact|email|hire|recruit|opportunit|reach/.test(text)) return `You can reach ${profile.name} at ${profile.email}. He is based in ${profile.location} and open to IT and cybersecurity opportunities. Visit the Contact section for his GitHub and LinkedIn profiles.`
   if (/educat|study|studying|degree|master|diploma|yoobee/.test(text)) return 'Ronald is studying a Master of Information Technology with a cybersecurity specialisation. He also has a Diploma in Cloud Engineering from Yoobee. You can find these in the Education section.'
-  if (/hello|^hi\b|^hey\b/.test(text)) return `Hi! I'm Pearl, your guide to ${profile.name}'s portfolio. Ask me about his projects, technical skills, education or how to get in touch.`
+  if (/hello|^hi\b|^hey\b/.test(text)) return `Hi! I'm Rose, your guide to ${profile.name}'s portfolio. Ask me about his projects, technical skills, education or how to get in touch.`
   const project = projects.find(item => {
     const terms = [...item.tags, item.title].join(' ').toLowerCase().split(/[^a-z0-9]+/).filter(word => word.length > 3 && !['project', 'systems', 'analysis', 'research', 'building'].includes(word))
     return terms.some(word => text.includes(word))

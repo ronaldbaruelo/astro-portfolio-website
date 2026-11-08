@@ -170,7 +170,7 @@ h1 span{color:var(--green)}
 @media(max-width:530px){.hero-kicker{font-size:12px}.eyebrow-pill{font-size:8.5px;white-space:normal}.hero-copy h1{font-size:clamp(35px,9.2vw,49px)}.hero-description{font-size:14px}.hero-actions{gap:9px}.btn{padding:14px;font-size:12px}.hero-location{flex-wrap:wrap;gap:8px}.stats-bar span{font-size:8.5px}.skills-grid,.projects-grid{grid-template-columns:1fr}.project-body{min-height:0}.section-heading h2{font-size:34px}.education-feature{padding:24px;gap:14px}.edu-icon{width:43px;height:43px}.contact-line{grid-template-columns:22px 60px 1fr;gap:6px}.contact-right{padding:7px 13px}.contact-value,.not-set{font-size:10px}.footer-inner{justify-content:center;text-align:center}.terminal-content{padding:20px 16px;font-size:9.5px}.terminal-bottom{font-size:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
-/* Pearl portfolio assistant */
+/* Rose portfolio assistant */
 .chat-thinking{color:var(--green);font-size:12px;padding:8px 0}.chat-error{border:1px solid #c77d7d66;background:#51262655;color:#ffbaba;font-size:12px;line-height:1.6;padding:12px;border-radius:8px}.portfolio-chat button:disabled{opacity:.4;cursor:default}
 .pearl-avatar{display:grid;place-items:center;width:39px;height:39px;flex:none;border-radius:50%;background:#60efb61a;border:1px solid #60efb680;color:var(--green)}
 .pearl-launcher-icon{display:grid;place-items:center;width:30px;height:24px;color:#082419}

@@ -90,7 +90,7 @@ export const projectOverviews = {
     { title: 'Project objective', text: 'Answer user questions through a conversational interface.' },
     { title: 'Project focus', text: 'Build an interface where users can ask questions and read replies as a conversation.' },
     { title: 'Topics covered', text: 'Chatbot development, conversational interfaces and user interaction.' },
-    { title: 'Try the portfolio assistant', text: 'Use the Ask Pearl button on this webpage to explore a conversational guide to Ronald’s projects, skills and education.' },
+    { title: 'Try the portfolio assistant', text: 'Use the Ask Rose button on this webpage to explore a conversational guide to Ronald’s projects, skills and education.' },
   ],
 }
 

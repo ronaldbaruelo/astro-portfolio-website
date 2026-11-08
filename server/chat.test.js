@@ -12,11 +12,11 @@ async function serve(t, options) {
 const question = [{ role: 'user', content: 'Tell me about Ronald' }]
 
 test('accepts a pre-parsed Vercel request body', async () => {
-  const handler = createRequestHandler({ apiKey: 'test', fetchImpl: async () => Response.json({ candidates: [{ content: { parts: [{ text: 'Hello from Pearl' }] } }] }) })
+  const handler = createRequestHandler({ apiKey: 'test', fetchImpl: async () => Response.json({ candidates: [{ content: { parts: [{ text: 'Hello from Rose' }] } }] }) })
   let status, result
   await handler({ url: '/api/chat', method: 'POST', headers: { host: 'portfolio.example', origin: 'https://portfolio.example', 'content-type': 'application/json' }, socket: { remoteAddress: '127.0.0.1' }, body: { messages: question } }, { writeHead(code) { status = code }, end(body) { result = JSON.parse(body) } })
   assert.equal(status, 200)
-  assert.deepEqual(result, { reply: 'Hello from Pearl' })
+  assert.deepEqual(result, { reply: 'Hello from Rose' })
 })
 
 test('accepts local Vite origins in development and restricts production origins', async t => {
