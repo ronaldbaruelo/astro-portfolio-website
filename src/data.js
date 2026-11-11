@@ -167,4 +167,17 @@ export const projects = [
     accent: 'green',
     link: '',
   },
+  {
+    id: '07',
+    title: 'Sales Data Analytics',
+    category: 'Data & ML',
+    categoryKey: 'data',
+    summary:
+      'A sales analytics dashboard in Databricks for exploring sales data and business insights.',
+    tags: ['Databricks', 'Sales Analytics', 'Data Visualisation'],
+    visual: 'SALES / ANALYTICS',
+    accent: 'amber',
+    link: 'https://dbc-5986a488-231c.cloud.databricks.com/dashboardsv3/01f1dda4dde012c091670bc1983a27ba/published?o=7474658061533648',
+    linkLabel: 'Project overview',
+  },
 ]

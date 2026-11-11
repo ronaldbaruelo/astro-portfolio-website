@@ -3,6 +3,7 @@ import {
   ArrowDownRight,
   ArrowRight,
   ArrowUpRight,
+  BarChart3,
   BookOpen,
   Check,
   ChevronRight,
@@ -37,7 +38,7 @@ const skillIcons = {
   code: Code2,
   book: BookOpen,
 }
-const iconForProject = { '01': Radar, '02': ShieldCheck, '03': Mail, '04': Code2, '05': Code2 }
+const iconForProject = { '01': Radar, '02': ShieldCheck, '03': Mail, '04': Code2, '05': Code2, '07': BarChart3 }
 
 function SectionHeading({ number, eyebrow, title, description }) {
   return (
@@ -193,7 +194,7 @@ function ProjectCard({ project }) {
     <article className={`project-card accent-${project.accent}`}>
       <div className="project-visual">
         <span className="project-no">PROJECT_{project.id}</span>
-        <Icon className="project-art-icon" size={64} strokeWidth={1.15} aria-hidden="true" />
+        <Icon className="project-art-icon" size={48} strokeWidth={1.15} aria-hidden="true" />
         <span className="project-art-label">{project.visual}</span>
         <span className="project-visual-stripe" aria-hidden="true" />
       </div>
@@ -203,7 +204,7 @@ function ProjectCard({ project }) {
         <p>{project.summary}</p>
         <div className="project-tags">{project.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
         {project.link ? (
-          <a className="project-action" href={project.link} target="_blank" rel="noreferrer">View project <ExternalLink size={16} /></a>
+          <a className="project-action" href={project.link} target="_blank" rel="noopener noreferrer">{project.linkLabel || 'View project'} <ExternalLink size={16} /></a>
         ) : (
           <button type="button" className="project-action project-overview-button" onClick={() => dialogRef.current?.showModal()}>Project overview <ChevronRight size={16} /></button>
         )}
