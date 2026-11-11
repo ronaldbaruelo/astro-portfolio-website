@@ -177,7 +177,7 @@ export const projects = [
     tags: ['Databricks', 'Sales Analytics', 'Data Visualisation'],
     visual: 'SALES / ANALYTICS',
     accent: 'amber',
-    link: 'https://dbc-5986a488-231c.cloud.databricks.com/dashboardsv3/01f1dda4dde012c091670bc1983a27ba/published?o=7474658061533648',
+    link: 'https://databricks-dashboard-4eedzp3h3jnehnva3slymc.streamlit.app/',
     linkLabel: 'Project overview',
   },
 ]
